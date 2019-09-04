@@ -18,14 +18,13 @@ void draw() {
   if(a>=1) a=-1;
   if(b<=-2) b=0;
   
-  
-      ps.addParticle(a,b);
-      ps.run();
+  ps.addParticle(a,b);
+  ps.run();
     
-  a=randomGaussian()*2;
-  b=randomGaussian()*2;
+  a=randomGaussian()*2-1;
+  b=randomGaussian()*2-2;
 }
 void keyPressed()
 {
-  if (keyCode == ENTER)  save((int)random(1000) + ".png");
+  if (keyCode == ENTER)  save((int)random(100000) + ".png");
 }

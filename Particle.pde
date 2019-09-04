@@ -7,10 +7,10 @@ class Particle {
   int gray;
 
   Particle(PVector l, float a, float b) {
-    acceleration = new PVector(0, 4);
+    acceleration = new PVector(0, 0.05);
     velocity = new PVector(a, b);
     position = l.copy();
-    lifespan = 300.0;    
+    lifespan = 130.0;    
     gray = 255;
   }
 
@@ -34,7 +34,7 @@ class Particle {
     colorMode(RGB, 255);
     stroke(gray,gray,gray, 40);
     fill(gray, gray, gray, 40);
-    arc(width, 0, random(0, 2*width), random(0, 2*height), width*1/4, height/2);
+    triangle(0, 0, random(0, width), random(0, height), -40, -40);
   }
 
   // Is the particle still useful?
