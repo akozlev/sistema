@@ -10,3 +10,5 @@ application.macosx
 out
 *.png
 .history
+
+*/output
